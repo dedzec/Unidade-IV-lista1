@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+
+</body>
+<script>
+    /* Questão: 3. Faça uma função e um programa de teste para o cálculo
+     *      do volume de uma esfera. Sendo que o raio e passado por parâmetro
+     * Autor: Lucas Leal Magalhães
+     * Data: 15/07/2023
+     **/
+    function print(text) {
+        console.log(text);
+        alert(text);
+    }
+
+    function volume(raio) {
+        return (4 / 3) * 3.14 * (raio * raio * raio);
+    }
+
+    function start() {
+        let raio = parseFloat(prompt('Digite o raio da esfera: '));
+
+        if (!isNaN(raio)) {
+            print(`Volume da esfera é ${volume(raio)}`);
+        } else {
+            print('Você não digitou um número');
+        }
+    }
+
+    start();
+</script>
+</html>

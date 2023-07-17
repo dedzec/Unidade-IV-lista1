@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+
+</body>
+<script>
+    /* Questão: 7. Crie uma função que recebe um inteiro positivo e teste
+     *      para saber se ele é primo ou não. Faça um script que recebe
+     *      um inteiro n e mostra todos os primos, de 1 até n.
+     * Autor: Lucas Leal Magalhães
+     * Data: 15/07/2023
+     **/
+    function print(text) {
+        console.log(text);
+        alert(text);
+    }
+
+    function primo(num) {
+        for (let n = 1; n <= num; n++) {
+            let res = 0;
+            for (i = 2; i <= n / 2; i++) {
+                if (n % i == 0) {
+                    res++;
+                    break;
+                }
+            }
+            
+            if (res == 0) {
+                print( `${n} é um número primo`);
+            }
+        }
+    }
+
+    function start() {
+        let num = parseFloat(prompt('Digite um número: '));
+        
+        if (!isNaN(num)) {
+            primo(num);
+        } else {
+            print('Você não digitou um número');
+        }
+    }
+
+    start();
+</script>
+</html>
